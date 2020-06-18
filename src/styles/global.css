@@ -1,5 +1,7 @@
 .slideshow {
   position: relative;
+  width: 100vw;
+  height: 60vh;
 }
 
 .slideshow--text {
@@ -7,9 +9,4 @@
   top: 50%;
   width: 100%;
   text-align: center;
-}
-
-.slideshow--image {
-  width: 100vw;
-  height: 60vh;
 }
