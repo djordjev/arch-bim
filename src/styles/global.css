@@ -1,0 +1,15 @@
+.slideshow {
+  position: relative;
+}
+
+.slideshow--text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.slideshow--image {
+  width: 100vw;
+  height: 60vh;
+}
