@@ -1,6 +1,6 @@
 .slideshow {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 60vh;
 }
 
@@ -19,4 +19,56 @@
 .slideshow--text div {
   color: white;
   font-size: 50px;
+}
+
+.header {
+  position: relative;
+  background-color: #29293a;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header svg {
+  cursor: pointer;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu {
+  background-color: rgba(41, 41, 58, 0.98);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.vertical-line {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  height: 120px;
+}
+
+.menu-close {
+  position: absolute;
+  top: 27px;
+  cursor: pointer;
+}
+
+.menu-item {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
 }
