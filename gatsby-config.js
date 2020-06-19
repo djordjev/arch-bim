@@ -7,6 +7,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        langKeyForNull: "en",
+        useLangKeyLayout: false,
+        prefixDefault: false,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `slideshow`,

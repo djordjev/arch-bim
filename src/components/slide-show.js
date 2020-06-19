@@ -2,7 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundSlider from "gatsby-image-background-slider"
 
-const SlideShow = () => {
+const SlideShow = props => {
+  const copy = props.copy || []
+
   return (
     <div className="slideshow">
       <BackgroundSlider
@@ -26,10 +28,14 @@ const SlideShow = () => {
         transition={4} // transition duration between images
         duration={8} // how long an image is shown
         // specify images to include (and their order) according to `relativePath`
-        images={["header1.jpg", "header2.jpg"]}
+        images={["hero1.jpg", "hero2.jpg", "hero3.jpg"]}
       >
-        <h2 className="slideshow--text">Slika1</h2>
-        <h2 className="slideshow--text">Meow</h2>
+        {copy.map(c => (
+          <div className="slideshow--text" key={c.header}>
+            <h2>{c.header}</h2>
+            <div>{c.description}</div>
+          </div>
+        ))}
       </BackgroundSlider>
     </div>
   )
