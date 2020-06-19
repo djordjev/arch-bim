@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import HomeDescription from "../components/home-description"
 import SlideShow from "../components/slide-show"
 
 const copy = [
@@ -25,9 +25,12 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Pocetna" />
     <SlideShow copy={copy} />
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    <HomeDescription
+      primaryTitle="AUTENTIČAN DIZAJN"
+      primaryDescription="Autentična i kreativna arhitektonska i enterijerska rešenja, koja privlače i inspirišu."
+      secondaryTitle="RAZVOJ PROJEKTA"
+      secondaryDescription="Razvoj konceptualnog rešenja u gotov idejni i izvođački projekat, uz pomoć specijalizovanog BIM sistema."
+    />
     <Link to="/about">O</Link> <br />
     <Link to="/services">Usluge</Link> <br />
     <Link to="/contact">Kontakt</Link> <br />

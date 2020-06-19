@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Menu = props => {
+const Lang = props => {
   const data = useStaticQuery(graphql`
     query {
       rs: file(relativePath: { eq: "rs.png" }) {
@@ -55,4 +55,4 @@ const Menu = props => {
   )
 }
 
-export default Menu
+export default Lang
