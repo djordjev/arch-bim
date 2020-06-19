@@ -10,3 +10,13 @@
   width: 100%;
   text-align: center;
 }
+
+.slideshow--text h2 {
+  color: white;
+  font-size: 65px;
+}
+
+.slideshow--text div {
+  color: white;
+  font-size: 50px;
+}
