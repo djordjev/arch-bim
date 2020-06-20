@@ -1,0 +1,42 @@
+.home-services {
+  background-color: #eeeeee;
+  min-height: 200px;
+  margin-top: -110px;
+}
+
+.home-services--header {
+  position: relative;
+  margin: 30px auto 90px;
+  width: 500px;
+  text-align: center;
+  letter-spacing: 7px;
+  padding-top: 200px;
+}
+
+.home-services--header h2:first-child {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.home-services--header h2:last-child {
+  font-size: 50px;
+}
+
+.home-services--content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.bg-image {
+  position: absolute;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .home-services--header {
+    width: 100%;
+    padding-top: 80px;
+  }
+}

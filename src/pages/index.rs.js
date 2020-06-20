@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeDescription from "../components/home-description"
 import SlideShow from "../components/slide-show"
+import HomeServices from "../components/home-services/home-services"
 
 const copy = [
   {
@@ -31,6 +32,7 @@ const IndexPage = () => (
       secondaryTitle="RAZVOJ PROJEKTA"
       secondaryDescription="Razvoj konceptualnog rešenja u gotov idejni i izvođački projekat, uz pomoć specijalizovanog BIM sistema."
     />
+    <HomeServices />
     <Link to="/about">O</Link> <br />
     <Link to="/services">Usluge</Link> <br />
     <Link to="/contact">Kontakt</Link> <br />

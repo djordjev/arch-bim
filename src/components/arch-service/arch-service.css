@@ -1,0 +1,70 @@
+.arch-service {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.arch-service--reverse {
+  flex-direction: row-reverse;
+}
+
+.arch-service--image {
+  width: 50%;
+  height: 100%;
+}
+
+.arch-service--copy {
+  width: 50%;
+  background-color: white;
+  padding: 165px 130px;
+  height: 709px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.arch-service--top {
+  font-weight: bold;
+  color: rgb(144, 144, 167);
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+
+.arch-service--title {
+  color: rgb(41, 41, 58);
+  font-size: 26px;
+  letter-spacing: 8px;
+  line-height: 39px;
+}
+
+.arch-service--separator {
+  width: 50px;
+  margin: 50px auto;
+  border: 1px solid #c3ccdc;
+}
+
+.arch-service--desc {
+  color: rgb(144, 144, 167);
+  font-size: 19px;
+}
+
+@media screen and (max-width: 600px) {
+  .arch-service {
+    flex-direction: column;
+  }
+
+  .arch-service--reverse {
+    flex-direction: column;
+  }
+
+  .arch-service--copy {
+    width: 100%;
+  }
+
+  .arch-service--image {
+    width: 100%;
+  }
+
+  .arch-service--copy {
+    padding: 20px;
+    height: 400px;
+  }
+}

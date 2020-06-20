@@ -2,6 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
+import "./home-description.css"
+
 const HomeDescription = props => {
   const {
     primaryTitle,
