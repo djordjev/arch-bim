@@ -4,3 +4,18 @@
   left: 0;
   right: 0;
 }
+
+.primary-button {
+  background-color: #6f6fcb;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+.primary-button:hover {
+  opacity: 0.8;
+}

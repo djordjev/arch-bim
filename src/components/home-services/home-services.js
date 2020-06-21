@@ -148,7 +148,11 @@ const HomeServices = props => {
         {copyData.map(renderElement)}
       </div>
 
-      <Link to={buttonLink}>{buttonCopy}</Link>
+      <div className="button-wrapper">
+        <Link className="primary-button" to={buttonLink}>
+          {buttonCopy}
+        </Link>
+      </div>
     </div>
   )
 }
