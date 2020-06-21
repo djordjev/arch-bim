@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { isRS } from "../../utils/url"
 import Img from "gatsby-image"
 import ArchService from "../arch-service/arch-service"
+import { Link } from "gatsby"
 
 import "./home-services.css"
 
@@ -129,6 +130,9 @@ const HomeServices = props => {
     )
   }
 
+  const buttonCopy = rs ? "PORTFOLIO" : "SEE PORTFOLIO"
+  const buttonLink = rs ? "/rs/services" : "/services"
+
   return (
     <div className="home-services">
       <div className="home-services--header">
@@ -143,6 +147,8 @@ const HomeServices = props => {
       <div className="home-services--content">
         {copyData.map(renderElement)}
       </div>
+
+      <Link to={buttonLink}>{buttonCopy}</Link>
     </div>
   )
 }

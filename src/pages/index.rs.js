@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HomeDescription from "../components/home-description"
-import SlideShow from "../components/slide-show"
+import HomeDescription from "../components/home-description/home-description"
+import SlideShow from "../components/slide-show/slide-show"
 import HomeServices from "../components/home-services/home-services"
 
 const copy = [

@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundSlider from "gatsby-image-background-slider"
 
+import "./slide-show.css"
+
 const SlideShow = props => {
   const copy = props.copy || []
 

@@ -1,8 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { AiOutlineMenu } from "react-icons/ai/index"
-import Menu from "./menu"
-import Lang from "./lang"
+import Menu from "../menu/menu"
+import Lang from "../lang/lang"
+
+import "./header.css"
 
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = React.useState(false)

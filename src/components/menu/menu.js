@@ -2,7 +2,9 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Link } from "gatsby"
 import { AiOutlineClose } from "react-icons/ai"
-import { isRS } from "../utils/url"
+import { isRS } from "../../utils/url"
+
+import "./menu.css"
 
 const Menu = props => {
   const docDefined = typeof document !== "undefined"

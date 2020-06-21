@@ -1,0 +1,12 @@
+.header {
+  position: relative;
+  background-color: #29293a;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header svg {
+  cursor: pointer;
+}
