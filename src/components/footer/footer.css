@@ -1,0 +1,67 @@
+.parallax-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-wrapper-copy {
+  font-size: 100px;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-wrapper-copy h2 {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 80%;
+  margin: 40px auto;
+  font-size: 85px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .parallax-wrapper-copy h2 {
+    font-size: 60px;
+    padding-bottom: 25px;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .parallax-wrapper-copy h2 {
+    font-size: 22px;
+    padding-bottom: 15px;
+    margin: 10px auto;
+  }
+}
+
+.parallax-remaining-services {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+
+.parallax-remaining-services div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-icon {
+  height: 100px;
+  width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .parallax-icon {
+    height: 50px;
+    width: 50px;
+  }
+}

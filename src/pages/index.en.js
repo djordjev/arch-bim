@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import HomeDescription from "../components/home-description/home-description"
@@ -33,10 +32,6 @@ const IndexPage = () => (
       secondaryDescription="With our specialised knowledge in BIM coordination and development we can turn your idea into finished architectural project, ready to be constructed."
     />
     <HomeServices />
-    <Link to="/about">About</Link> <br />
-    <Link to="/services">Services</Link> <br />
-    <Link to="/contact">Contact</Link> <br />
-    <Link to="/works">Works</Link>
   </Layout>
 )
 

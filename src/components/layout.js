@@ -8,6 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { useStaticQuery, graphql } from "gatsby"
+import { ParallaxProvider } from "react-scroll-parallax"
+import Footer from "./footer/footer"
 
 import Header from "./header/header"
 import "./layout.css"
@@ -33,12 +35,10 @@ const Layout = ({ children }) => {
           padding: `0`,
         }}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <ParallaxProvider>
+          <main>{children}</main>
+          <Footer />
+        </ParallaxProvider>
       </div>
     </>
   )
