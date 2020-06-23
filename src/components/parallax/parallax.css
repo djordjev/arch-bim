@@ -1,0 +1,35 @@
+.parallax {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-image {
+  min-height: 100%;
+}
+
+.parallax-children {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+}
+
+.parallax-children h2 {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  width: 80%;
+  margin: 40px auto;
+  font-size: 85px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .parallax-children h2 {
+    font-size: 60px;
+    padding-bottom: 25px;
+    margin: 20px auto;
+  }
+}

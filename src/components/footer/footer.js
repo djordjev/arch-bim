@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Parallax } from "react-scroll-parallax"
+import Parallax from "../../components/parallax/parallax"
 
 import "./footer.css"
 import { isRS } from "../../utils/url"
@@ -11,7 +11,7 @@ const Footer = () => {
     query {
       background: file(relativePath: { eq: "blue-background.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -64,27 +64,22 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="parallax-wrapper">
-        <Parallax y={[0, -70]}>
-          <Img fluid={data.background.childImageSharp.fluid} />
-        </Parallax>
-        <div className="parallax-wrapper-copy">
-          <h2>{headerTitle}</h2>
-          <div className="parallax-remaining-services">
-            {copy.map((c, i) => (
-              <div key={c}>
-                <Img
-                  className="parallax-icon"
-                  fluid={data[icons[i]].childImageSharp.fluid}
-                />
-                <div>{c}</div>
-              </div>
-            ))}
-          </div>
+      <Parallax height={400} image={data.background.childImageSharp.fluid}>
+        <h2>{headerTitle}</h2>
+        <div className="parallax-remaining-services">
+          {copy.map((c, i) => (
+            <div key={c}>
+              <Img
+                className="parallax-icon"
+                fluid={data[icons[i]].childImageSharp.fluid}
+              />
+              <div>{c}</div>
+            </div>
+          ))}
         </div>
-      </div>
+      </Parallax>
 
-      <div style={{ height: "800px" }}>contact</div>
+      <div style={{ height: "1800px" }}>contact</div>
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
