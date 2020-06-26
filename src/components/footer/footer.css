@@ -42,6 +42,16 @@
   width: 100px;
 }
 
+.footer-location {
+  margin: 80px auto;
+  text-align: center;
+}
+
+.footer-location a {
+  font-weight: bold;
+  color: var(--color-purple);
+}
+
 @media screen and (max-width: 600px) {
   .parallax-icon {
     height: 50px;

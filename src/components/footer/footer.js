@@ -81,7 +81,12 @@ const Footer = () => {
       </Parallax>
 
       <Contact />
-      {` `}
+      <div className="footer-location">
+        Belgrade, Serbia
+        <div>
+          <a href="mailto:office@arch-bim.com">office@arch-bim.com</a>
+        </div>
+      </div>
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
   )
