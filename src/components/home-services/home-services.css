@@ -3,6 +3,7 @@
   min-height: 200px;
   margin-top: -110px;
   padding-bottom: 50px;
+  padding-top: 200px;
 }
 
 .home-services--content {
@@ -25,6 +26,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .home-services {
+    padding-top: 0;
+  }
+
   .home-services--header {
     width: 100%;
     padding-top: 80px;

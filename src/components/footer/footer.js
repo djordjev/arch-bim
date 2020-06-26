@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Parallax from "../../components/parallax/parallax"
+import Contact from "../../components/contact/contact"
 
 import "./footer.css"
 import { isRS } from "../../utils/url"
@@ -79,7 +80,7 @@ const Footer = () => {
         </div>
       </Parallax>
 
-      <div style={{ height: "1800px" }}>contact</div>
+      <Contact />
       {` `}
       <a href="https://www.gatsbyjs.org">Gatsby</a>
     </footer>
