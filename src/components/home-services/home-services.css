@@ -5,24 +5,6 @@
   padding-bottom: 50px;
 }
 
-.home-services--header {
-  position: relative;
-  margin: 30px auto 90px;
-  width: 500px;
-  text-align: center;
-  letter-spacing: 7px;
-  padding-top: 200px;
-}
-
-.home-services--header h2:first-child {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.home-services--header h2:last-child {
-  font-size: 50px;
-}
-
 .home-services--content {
   position: relative;
   margin: 0 auto;

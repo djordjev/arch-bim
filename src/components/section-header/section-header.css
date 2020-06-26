@@ -1,0 +1,40 @@
+.section-header {
+  position: relative;
+  margin: 30px auto 90px;
+  width: 500px;
+  text-align: center;
+  letter-spacing: 7px;
+  padding-top: 200px;
+}
+
+.section-header--top {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--color-grey);
+  font-weight: normal;
+  margin-top: 26px;
+}
+
+.section-header--bottom {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.section-header--separator {
+  height: 70px;
+  width: 1px;
+  background-color: var(--color-grey);
+  margin: 0 auto;
+  border-left: 1px solid var(--color-grey);
+}
+
+@media screen and (max-width: 500px) {
+  .section-header {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .section-header--separator {
+    height: 40px;
+  }
+}

@@ -4,6 +4,7 @@ import { isRS } from "../../utils/url"
 import Img from "gatsby-image"
 import ArchService from "../arch-service/arch-service"
 import { Link } from "gatsby"
+import SectionHeader from "../section-header/section-header"
 
 import "./home-services.css"
 
@@ -135,10 +136,7 @@ const HomeServices = props => {
 
   return (
     <div className="home-services">
-      <div className="home-services--header">
-        <h2>{headerFirstLine}</h2>
-        <h2>{headerSecondLine}</h2>
-      </div>
+      <SectionHeader top={headerFirstLine} bottom={headerSecondLine} />
 
       <div className="bg-image">
         <Img fluid={data.bg.childImageSharp.fluid} />

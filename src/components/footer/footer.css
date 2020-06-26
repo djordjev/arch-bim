@@ -47,4 +47,10 @@
     height: 50px;
     width: 50px;
   }
+
+  .parallax-remaining-services {
+    width: 100%;
+    font-size: 16px;
+    align-items: flex-start;
+  }
 }
