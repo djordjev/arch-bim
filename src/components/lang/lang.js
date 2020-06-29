@@ -25,6 +25,7 @@ const Lang = props => {
   `)
 
   const onSerbian = () => {
+    if (typeof window === `undefined`) return false
     if (!window || !window.location) return false
 
     const pathname = window.location.pathname
@@ -35,6 +36,7 @@ const Lang = props => {
   }
 
   const onEnglish = () => {
+    if (typeof window === `undefined`) return false
     if (!window || !window.location) return false
 
     const pathname = window.location.pathname

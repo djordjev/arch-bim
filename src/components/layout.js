@@ -5,12 +5,13 @@ import Footer from "./footer/footer"
 import Header from "./header/header"
 import "./layout.css"
 import { IntlProvider } from "react-intl"
-import { isRS } from "../utils/url"
 import enMessages from "../i18n/en"
 import rsMessages from "../i18n/rs"
+import LocaleContext from "../utils/context"
 
 const Layout = ({ children }) => {
-  const rs = isRS()
+  const langContext = React.useContext(LocaleContext)
+  const rs = langContext === "rs"
   const langKey = rs ? "sr" : "en"
   const messages = rs ? rsMessages : enMessages
 

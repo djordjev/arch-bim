@@ -3,11 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Parallax from "../../components/parallax/parallax"
 import Contact from "../../components/contact/contact"
-import { Link } from "gatsby"
 import { useIntl } from "react-intl"
 
 import "./footer.css"
-import { buildLink } from "../../utils/url"
+import Link from "../../utils/link"
 
 const Footer = () => {
   const intl = useIntl()
@@ -58,12 +57,6 @@ const Footer = () => {
 
   const icons = ["structure", "interior", "landscape"]
 
-  const home = buildLink("/")
-  const about = buildLink("/about")
-  const services = buildLink("/services")
-  const contact = buildLink("/contact")
-  const works = buildLink("/works")
-
   const homeCopy = intl.formatMessage({ id: "home" })
   const aboutCopy = intl.formatMessage({ id: "about" })
   const servicesCopy = intl.formatMessage({ id: "services" })
@@ -96,11 +89,11 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="footer-links">
-          <Link to={home}>{homeCopy}</Link>
-          <Link to={about}>{aboutCopy}</Link>
-          <Link to={services}>{servicesCopy}</Link>
-          <Link to={contact}>{contactCopy}</Link>
-          <Link to={works}>{worksCopy}</Link>
+          <Link to="/">{homeCopy}</Link>
+          <Link to="/about">{aboutCopy}</Link>
+          <Link to="/services">{servicesCopy}</Link>
+          <Link to="/contact">{contactCopy}</Link>
+          <Link to="/works">{worksCopy}</Link>
         </div>
         <div className="footer-tm">Arch-Bim, All Rights Reserved</div>
       </div>

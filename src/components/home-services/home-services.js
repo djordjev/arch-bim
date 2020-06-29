@@ -1,9 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { buildLink } from "../../utils/url"
 import Img from "gatsby-image"
 import ArchService from "../arch-service/arch-service"
-import { Link } from "gatsby"
+import Link from "../../utils/link"
 import SectionHeader from "../section-header/section-header"
 import { useIntl } from "react-intl"
 
@@ -122,7 +121,7 @@ const HomeServices = props => {
       </div>
 
       <div className="button-wrapper">
-        <Link className="primary-button" to={buildLink("/services")}>
+        <Link className="primary-button" to={"/services"}>
           {buttonCopy}
         </Link>
       </div>
