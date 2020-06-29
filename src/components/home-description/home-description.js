@@ -21,6 +21,14 @@ const HomeDescription = props => {
           }
         }
       }
+
+      interior: file(relativePath: { eq: "interior.jpg" }) {
+        childImageSharp {
+          fluid(maxHeight: 527) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -32,6 +40,10 @@ const HomeDescription = props => {
           <div className="home-description--copy">
             <h2>{primaryTitle}</h2>
             <div>{primaryDescription}</div>
+          </div>
+
+          <div className="home-description--interior">
+            <Img fluid={data.interior.childImageSharp.fluid} />
           </div>
 
           <div className="home-description--secondary">
