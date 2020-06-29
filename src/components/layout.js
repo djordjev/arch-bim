@@ -1,45 +1,34 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
-import { ParallaxProvider } from "react-scroll-parallax"
 import Footer from "./footer/footer"
 
 import Header from "./header/header"
 import "./layout.css"
+import { IntlProvider } from "react-intl"
+import { isRS } from "../utils/url"
+import enMessages from "../i18n/en"
+import rsMessages from "../i18n/rs"
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
+  const rs = isRS()
+  const langKey = rs ? "sr" : "en"
+  const messages = rs ? rsMessages : enMessages
 
   return (
     <>
-      <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: "100vw",
-          padding: `0`,
-        }}
-      >
-        <ParallaxProvider>
+      <IntlProvider locale={langKey} messages={messages}>
+        <Header />
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: "100vw",
+            padding: `0`,
+          }}
+        >
           <main>{children}</main>
           <Footer />
-        </ParallaxProvider>
-      </div>
+        </div>
+      </IntlProvider>
     </>
   )
 }

@@ -2,34 +2,28 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { Link } from "gatsby"
 import { AiOutlineClose } from "react-icons/ai"
-import { isRS } from "../../utils/url"
+import { buildLink } from "../../utils/url"
+import { useIntl } from "react-intl"
 
 import "./menu.css"
 
 const Menu = props => {
+  const intl = useIntl()
+
   const docDefined = typeof document !== "undefined"
   const portalRoot = docDefined ? document.getElementById("overlay") : null
 
-  let home = "/"
-  let about = "/about"
-  let services = "/services"
-  let contact = "/contact"
-  let works = "/works"
+  const home = buildLink("/")
+  const about = buildLink("/about")
+  const services = buildLink("/services")
+  const contact = buildLink("/contact")
+  const works = buildLink("/works")
 
-  const rs = isRS()
-  if (rs) {
-    home = "/rs"
-    about = "/rs/about"
-    services = "/rs/services"
-    contact = "/rs/contact"
-    works = "/rs/works"
-  }
-
-  const homeCopy = rs ? "Naslovna" : "Home"
-  const aboutCopy = rs ? "O nama" : "About"
-  const servicesCopy = rs ? "Usluge" : "Services"
-  const contactCopy = rs ? "Kontakt" : "Contact"
-  const worksCopy = rs ? "Poslovi" : "Work"
+  const homeCopy = intl.formatMessage({ id: "home" })
+  const aboutCopy = intl.formatMessage({ id: "about" })
+  const servicesCopy = intl.formatMessage({ id: "services" })
+  const contactCopy = intl.formatMessage({ id: "contact" })
+  const worksCopy = intl.formatMessage({ id: "works" })
 
   const menu = (
     <div className="menu">

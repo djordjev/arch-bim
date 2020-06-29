@@ -98,6 +98,7 @@
 .footer-links a {
   color: rgb(41, 41, 58);
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .footer-links a:hover {

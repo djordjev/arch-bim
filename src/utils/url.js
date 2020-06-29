@@ -6,4 +6,12 @@ const isRS = () => {
   return pathname.startsWith("/rs")
 }
 
-export { isRS }
+const buildLink = link => {
+  if (isRS()) {
+    return `/rs${link}`
+  }
+
+  return link
+}
+
+export { buildLink, isRS }

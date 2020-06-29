@@ -4,16 +4,13 @@ import Img from "gatsby-image"
 import Parallax from "../../components/parallax/parallax"
 import Contact from "../../components/contact/contact"
 import { Link } from "gatsby"
+import { useIntl } from "react-intl"
 
 import "./footer.css"
-import { isRS } from "../../utils/url"
+import { buildLink } from "../../utils/url"
 
 const Footer = () => {
-  let home = "/"
-  let about = "/about"
-  let services = "/services"
-  let contact = "/contact"
-  let works = "/works"
+  const intl = useIntl()
 
   const data = useStaticQuery(graphql`
     query {
@@ -51,38 +48,27 @@ const Footer = () => {
     }
   `)
 
-  const rs = isRS()
-  const headerTitle = rs ? "OSTALE USLUGE" : "OTHER SERVICES"
+  const headerTitle = intl.formatMessage({ id: "footer_title" })
 
-  const enCopy = [
-    "BIM Management and coordination",
-    "Advanced free-form and parametric modeling",
-    "Landscaping",
-  ]
+  const bimManagement = intl.formatMessage({ id: "bim_management" })
+  const advancedModeling = intl.formatMessage({ id: "advanced_modeling" })
+  const landscaping = intl.formatMessage({ id: "landscaping" })
 
-  const rsCopy = [
-    "BIM menadžment i koordinacija",
-    "Modelovanje slobodnih i parametarskih formi",
-    "Pejzažno okruženje i teren",
-  ]
-
-  const copy = rs ? rsCopy : enCopy
+  const copy = [bimManagement, advancedModeling, landscaping]
 
   const icons = ["structure", "interior", "landscape"]
 
-  if (rs) {
-    home = "/rs"
-    about = "/rs/about"
-    services = "/rs/services"
-    contact = "/rs/contact"
-    works = "/rs/works"
-  }
+  const home = buildLink("/")
+  const about = buildLink("/about")
+  const services = buildLink("/services")
+  const contact = buildLink("/contact")
+  const works = buildLink("/works")
 
-  const homeCopy = rs ? "Naslovna" : "Home"
-  const aboutCopy = rs ? "O nama" : "About"
-  const servicesCopy = rs ? "Usluge" : "Services"
-  const contactCopy = rs ? "Kontakt" : "Contact"
-  const worksCopy = rs ? "Poslovi" : "Work"
+  const homeCopy = intl.formatMessage({ id: "home" })
+  const aboutCopy = intl.formatMessage({ id: "about" })
+  const servicesCopy = intl.formatMessage({ id: "services" })
+  const contactCopy = intl.formatMessage({ id: "contact" })
+  const worksCopy = intl.formatMessage({ id: "works" })
 
   return (
     <footer>

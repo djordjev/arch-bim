@@ -24,6 +24,7 @@
   color: white;
   margin: 15px;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .menu-item:hover {

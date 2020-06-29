@@ -1,64 +1,19 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { isRS } from "../../utils/url"
+import { buildLink } from "../../utils/url"
 import Img from "gatsby-image"
 import ArchService from "../arch-service/arch-service"
 import { Link } from "gatsby"
 import SectionHeader from "../section-header/section-header"
+import { useIntl } from "react-intl"
 
 import "./home-services.css"
 
 const HomeServices = props => {
-  const rs = isRS()
+  const intl = useIntl()
 
-  const headerFirstLine = !rs ? "PROFESSIONAL" : "BIM"
-  const headerSecondLine = !rs ? "SERVICES" : "USLUGE"
-
-  const enData = [
-    {
-      top: "RESIDENTIAL AND PUBLIC",
-      title: "ARCHITECTURAL DESIGN",
-      desc: `Our team offers high quality architectural design suited to everyone's standards.`,
-    },
-    {
-      top: "RESIDENTIAL AND PUBLIC",
-      title: "INTERIOR DESIGN",
-      desc: `We offer tasteful solution to modern living, as well as design of unique and elegant joinery and furniture.`,
-    },
-    {
-      top: "COMPLETE",
-      title: "PROJECT DEVELOPMENT",
-      desc: `We offer highest quality of project development and coordination using Autodesk REVIT.`,
-    },
-    {
-      top: "PRECISE",
-      title: "MEP COORDINATION",
-      desc: `We provide accurate models of all MEP elements, as well as solutions for all clashes.`,
-    },
-  ]
-
-  const rsData = [
-    {
-      top: "PRIVATNI I POSLOVNI",
-      title: "ARHITEKTONSKI DIZAJN",
-      desc: `Nudimo kvalitetna arhitektonska rešenja prilagođena standardima i potrebama klijenta.`,
-    },
-    {
-      top: "PRIVATNI I POSLOVNI",
-      title: "DIZAJN ENTERIJERA",
-      desc: `Nudimo organizaciju i reorganizaciju prostora po vašoj meri, dizajn prostorija, ugradnog nameštaja i rasvete.`,
-    },
-    {
-      top: "DETALJAN",
-      title: "RAZVOJ PROJEKTA",
-      desc: `Izrada kompletne projektne dokumentacije na osnovu idejnog rešenja, koristeći razvijen REVIT sistem.`,
-    },
-    {
-      top: "PRECIZNA",
-      title: "MEP KOORDINACIJA",
-      desc: `Pružamo uslugu detaljne koordinacije svih struka, kao i tehnička rešenja kolizija instalaterskih sudara.`,
-    },
-  ]
+  const headerFirstLine = intl.formatMessage({ id: "home_services_first" })
+  const headerSecondLine = intl.formatMessage({ id: "home_services_second" })
 
   const images = [
     "serviceArchDesign",
@@ -67,7 +22,28 @@ const HomeServices = props => {
     "serviceMep",
   ]
 
-  const copyData = isRS() ? rsData : enData
+  const copyData = [
+    {
+      top: intl.formatMessage({ id: "home_services_1_top" }),
+      title: intl.formatMessage({ id: "home_services_1_title" }),
+      desc: intl.formatMessage({ id: "home_services_1_desc" }),
+    },
+    {
+      top: intl.formatMessage({ id: "home_services_2_top" }),
+      title: intl.formatMessage({ id: "home_services_2_title" }),
+      desc: intl.formatMessage({ id: "home_services_2_desc" }),
+    },
+    {
+      top: intl.formatMessage({ id: "home_services_3_top" }),
+      title: intl.formatMessage({ id: "home_services_3_title" }),
+      desc: intl.formatMessage({ id: "home_services_3_desc" }),
+    },
+    {
+      top: intl.formatMessage({ id: "home_services_4_top" }),
+      title: intl.formatMessage({ id: "home_services_4_title" }),
+      desc: intl.formatMessage({ id: "home_services_4_desc" }),
+    },
+  ]
 
   const data = useStaticQuery(graphql`
     query {
@@ -131,8 +107,7 @@ const HomeServices = props => {
     )
   }
 
-  const buttonCopy = rs ? "PORTFOLIO" : "SEE PORTFOLIO"
-  const buttonLink = rs ? "/rs/services" : "/services"
+  const buttonCopy = intl.formatMessage({ id: "portfolio" })
 
   return (
     <div className="home-services">
@@ -147,7 +122,7 @@ const HomeServices = props => {
       </div>
 
       <div className="button-wrapper">
-        <Link className="primary-button" to={buttonLink}>
+        <Link className="primary-button" to={buildLink("/services")}>
           {buttonCopy}
         </Link>
       </div>

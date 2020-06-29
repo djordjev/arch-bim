@@ -1,18 +1,18 @@
 import React from "react"
 import SectionHeader from "../section-header/section-header"
-import { isRS } from "../../utils/url"
+import { useIntl } from "react-intl"
 
 import "./contact.css"
 
 const Contact = () => {
-  const rs = isRS()
+  const intl = useIntl()
 
-  const top = rs ? "kontakt" : "contact"
-  const bottom = rs ? "" : "reach us"
+  const top = intl.formatMessage({ id: "contact" })
+  const bottom = intl.formatMessage({ id: "reach_us" })
 
-  const name = rs ? "Ime" : "Name"
-  const message = rs ? "Poruka" : "Message"
-  const send = rs ? "Pošalji" : "Send"
+  const name = intl.formatMessage({ id: "name" })
+  const message = intl.formatMessage({ id: "message" })
+  const send = intl.formatMessage({ id: "send" })
 
   return (
     <div>
