@@ -64,3 +64,43 @@
     align-items: flex-start;
   }
 }
+
+.footer-bottom {
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+}
+
+.footer-tm {
+  color: rgb(129, 128, 147);
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.footer-links {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  padding: 80px 0;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-links {
+    padding: 40px 0;
+  }
+
+  .footer-tm {
+    padding-bottom: 40px;
+  }
+}
+
+.footer-links a {
+  color: rgb(41, 41, 58);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--color-purple);
+  text-decoration: underline;
+}

@@ -25,22 +25,25 @@ const Contact = () => {
       >
         <label htmlFor="name">Name</label>
         <input
+          aria-label="name"
           className="input-field top-field"
           type="text"
           name="name"
           id="name"
           placeholder={name}
         />
-        <label htmlFor="name">Email</label>
+        <label htmlFor="email">Email</label>
         <input
+          aria-label="email"
           className="input-field top-field"
           type="email"
           name="email"
           placeholder="E-Mail"
           id="email"
         />
-        <label htmlFor="name">Message</label>
+        <label htmlFor="message">Message</label>
         <textarea
+          aria-label="message"
           className="input-field message"
           type="text"
           name="message"

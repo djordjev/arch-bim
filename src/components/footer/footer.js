@@ -3,11 +3,18 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Parallax from "../../components/parallax/parallax"
 import Contact from "../../components/contact/contact"
+import { Link } from "gatsby"
 
 import "./footer.css"
 import { isRS } from "../../utils/url"
 
 const Footer = () => {
+  let home = "/"
+  let about = "/about"
+  let services = "/services"
+  let contact = "/contact"
+  let works = "/works"
+
   const data = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "blue-background.jpg" }) {
@@ -63,6 +70,20 @@ const Footer = () => {
 
   const icons = ["structure", "interior", "landscape"]
 
+  if (rs) {
+    home = "/rs"
+    about = "/rs/about"
+    services = "/rs/services"
+    contact = "/rs/contact"
+    works = "/rs/works"
+  }
+
+  const homeCopy = rs ? "Naslovna" : "Home"
+  const aboutCopy = rs ? "O nama" : "About"
+  const servicesCopy = rs ? "Usluge" : "Services"
+  const contactCopy = rs ? "Kontakt" : "Contact"
+  const worksCopy = rs ? "Poslovi" : "Work"
+
   return (
     <footer>
       <Parallax height={400} image={data.background.childImageSharp.fluid}>
@@ -87,7 +108,16 @@ const Footer = () => {
           <a href="mailto:office@arch-bim.com">office@arch-bim.com</a>
         </div>
       </div>
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <div className="footer-bottom">
+        <div className="footer-links">
+          <Link to={home}>{homeCopy}</Link>
+          <Link to={about}>{aboutCopy}</Link>
+          <Link to={services}>{servicesCopy}</Link>
+          <Link to={contact}>{contactCopy}</Link>
+          <Link to={works}>{worksCopy}</Link>
+        </div>
+        <div className="footer-tm">Arch-Bim, All Rights Reserved</div>
+      </div>
     </footer>
   )
 }
