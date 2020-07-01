@@ -1,0 +1,42 @@
+.about--copy {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  padding: 140px 0;
+  margin-left: 150px;
+}
+
+.about--copy h2 {
+  text-transform: uppercase;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.about--copy p {
+  text-align: justify;
+  max-width: 550px;
+  margin: 40px auto;
+}
+
+.about--bg {
+  position: absolute;
+  height: 100%;
+}
+
+.about--content {
+  position: relative;
+  height: 550px;
+}
+
+@media screen and (max-width: 800px) {
+  .about--copy {
+    width: 80%;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about--copy {
+    width: 95%;
+  }
+}

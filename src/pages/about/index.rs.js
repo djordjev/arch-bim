@@ -7,9 +7,9 @@ import LocaleContext from "../../utils/context"
 
 const IndexPage = () => {
   return (
-    <LocaleContext.Provider value="en">
+    <LocaleContext.Provider value="rs">
       <Layout>
-        <SEO title="About" />
+        <SEO title="O Nama" />
         <About />
       </Layout>
     </LocaleContext.Provider>

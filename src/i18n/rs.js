@@ -10,6 +10,7 @@ const translation = {
   landscaping: "Pejzažno okruženje i teren",
   home: "Naslovna",
   about: "O nama",
+  about_us: "O Nama",
   services: "Usluge",
   works: "Poslovi",
   trademark: "Arch-Bim, Sva prava zadržana",
@@ -38,6 +39,7 @@ const translation = {
   home_description: `Autentična i kreativna arhitektonska i enterijerska rešenja, koja privlače i inspirišu.`,
   design_development: "RAZVOJ PROJEKTA",
   home_secondary_description: `Razvoj konceptualnog rešenja u gotov idejni i izvođački projekat, uz pomoć specijalizovanog BIM sistema.`,
+  about_us_copy: `Mi smo tim arhitekata, dizajnera i inženjera, iskusnih u projektovanju u Autodesk REVIT okruženju. Zahvaljujući našim organizacionim i timskim veštinama, kreirali smo strategije i standarde koji su učinili proces projektovanja i izrade dokumentacije vrlo naprednim i brzim, tako da nijedan izazov ne predstavlja prepreku.`,
 }
 
 export default translation

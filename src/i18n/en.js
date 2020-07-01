@@ -10,6 +10,7 @@ const translation = {
   landscaping: "Landscaping",
   home: "Home",
   about: "About",
+  about_us: "About Us",
   services: "Services",
   works: "Works",
   trademark: "Arch-Bim, All Rights Reserved",
@@ -38,6 +39,7 @@ const translation = {
   home_description: `We offer creative architecture and interior design solutions meant to attract and inspire. With our skills, experiance and creativity no task is unreachable.`,
   design_development: "DESIGN DEVELOPMENT",
   home_secondary_description: `With our specialised knowledge in BIM coordination and development we can turn your idea into finished architectural project, ready to be constructed.`,
+  about_us_copy: `We are a group of architects, designers and engineers who are specialised in the design and production of project in Autodesk Revit workflow. Thanks to our perfect teamwork and project management skills, we provide flawless projects. During our BIM coordination experiance we created standards and strategies that are making our development process more effortless and productive with each step.`,
 }
 
 export default translation
