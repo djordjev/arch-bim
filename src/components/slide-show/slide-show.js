@@ -1,11 +1,27 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundSlider from "gatsby-image-background-slider"
+import { useIntl } from "react-intl"
 
 import "./slide-show.css"
 
-const SlideShow = props => {
-  const copy = props.copy || []
+const SlideShow = () => {
+  const intl = useIntl()
+
+  const copy = [
+    {
+      header: intl.formatMessage({ id: "slide_show_1_header" }),
+      description: intl.formatMessage({ id: "slide_show_1_description" }),
+    },
+    {
+      header: intl.formatMessage({ id: "slide_show_2_header" }),
+      description: intl.formatMessage({ id: "slide_show_2_description" }),
+    },
+    {
+      header: intl.formatMessage({ id: "slide_show_3_header" }),
+      description: intl.formatMessage({ id: "slide_show_3_description" }),
+    },
+  ]
 
   return (
     <div className="slideshow">

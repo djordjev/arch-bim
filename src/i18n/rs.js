@@ -40,6 +40,15 @@ const translation = {
   design_development: "RAZVOJ PROJEKTA",
   home_secondary_description: `Razvoj konceptualnog rešenja u gotov idejni i izvođački projekat, uz pomoć specijalizovanog BIM sistema.`,
   about_us_copy: `Mi smo tim arhitekata, dizajnera i inženjera, iskusnih u projektovanju u Autodesk REVIT okruženju. Zahvaljujući našim organizacionim i timskim veštinama, kreirali smo strategije i standarde koji su učinili proces projektovanja i izrade dokumentacije vrlo naprednim i brzim, tako da nijedan izazov ne predstavlja prepreku.`,
+  work_1_top: "KONKURS",
+  work_1_title: "BEOGRADSKA ŽELEZNIČKA STANICA",
+  work_1_desc: `Idejno rešenje za železničku stanicu sa pripadajućim poslovnim objektom u Beogradu`,
+  work_2_top: "KONKURS",
+  work_2_title: "POSLOVNA ZGRADA U BEOGRADU",
+  work_2_desc: `Poslovna zgrada na Slaviji sa izložbenim prostorom na poslednjem spratu`,
+  work_3_top: "DIZAJN",
+  work_3_title: "PRIVATNI STAN U BEOGRADU",
+  work_3_desc: `Privatni stan u ulici Dimitrija Tucovića, Beograd`,
 }
 
 export default translation

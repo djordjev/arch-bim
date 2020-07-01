@@ -40,6 +40,15 @@ const translation = {
   design_development: "DESIGN DEVELOPMENT",
   home_secondary_description: `With our specialised knowledge in BIM coordination and development we can turn your idea into finished architectural project, ready to be constructed.`,
   about_us_copy: `We are a group of architects, designers and engineers who are specialised in the design and production of project in Autodesk Revit workflow. Thanks to our perfect teamwork and project management skills, we provide flawless projects. During our BIM coordination experiance we created standards and strategies that are making our development process more effortless and productive with each step.`,
+  work_1_top: "COMPETITION",
+  work_1_title: "BELGRADE TRAIN STATION",
+  work_1_desc: `Competition project for train station and business building.`,
+  work_2_top: "COMPETITION",
+  work_2_title: "BUSINESS BUILDING IN BELGRADE",
+  work_2_desc: `Business building with gallery on last floor`,
+  work_3_top: "INTERIOR",
+  work_3_title: "PRIVATE APARTMENT IN BELGRADE",
+  work_3_desc: `Interior design for private apartment in Belgrade`,
 }
 
 export default translation
