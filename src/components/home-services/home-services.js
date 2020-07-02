@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import ArchService from "../arch-service/arch-service"
+import ArchServiceList from "../arch-service-list/arch-service-list"
 import Link from "../../utils/link"
 import SectionHeader from "../section-header/section-header"
 import { useIntl } from "react-intl"
@@ -11,49 +10,8 @@ import "./home-services.css"
 const HomeServices = props => {
   const intl = useIntl()
 
-  const headerFirstLine = intl.formatMessage({ id: "home_services_first" })
-  const headerSecondLine = intl.formatMessage({ id: "home_services_second" })
-
-  const images = [
-    "serviceArchDesign",
-    "serviceInteriorDesign",
-    "serviceProject",
-    "serviceMep",
-  ]
-
-  const copyData = [
-    {
-      top: intl.formatMessage({ id: "home_services_1_top" }),
-      title: intl.formatMessage({ id: "home_services_1_title" }),
-      desc: intl.formatMessage({ id: "home_services_1_desc" }),
-    },
-    {
-      top: intl.formatMessage({ id: "home_services_2_top" }),
-      title: intl.formatMessage({ id: "home_services_2_title" }),
-      desc: intl.formatMessage({ id: "home_services_2_desc" }),
-    },
-    {
-      top: intl.formatMessage({ id: "home_services_3_top" }),
-      title: intl.formatMessage({ id: "home_services_3_title" }),
-      desc: intl.formatMessage({ id: "home_services_3_desc" }),
-    },
-    {
-      top: intl.formatMessage({ id: "home_services_4_top" }),
-      title: intl.formatMessage({ id: "home_services_4_title" }),
-      desc: intl.formatMessage({ id: "home_services_4_desc" }),
-    },
-  ]
-
   const data = useStaticQuery(graphql`
     query {
-      bg: file(relativePath: { eq: "works-bg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-
       serviceArchDesign: file(relativePath: { eq: "service-arch-design.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
@@ -90,39 +48,45 @@ const HomeServices = props => {
     }
   `)
 
-  const renderElement = (element, i) => {
-    const isEven = i % 2 === 0
-    const imagePosition = isEven ? "left" : "right"
-
-    return (
-      <ArchService
-        key={element.title}
-        top={element.top}
-        title={element.title}
-        desc={element.desc}
-        image={data[images[i]].childImageSharp.fluid}
-        imagePosition={imagePosition}
-      />
-    )
-  }
-
-  const buttonCopy = intl.formatMessage({ id: "portfolio" })
+  const services = [
+    {
+      top: intl.formatMessage({ id: "home_services_1_top" }),
+      title: intl.formatMessage({ id: "home_services_1_title" }),
+      desc: intl.formatMessage({ id: "home_services_1_desc" }),
+      image: data.serviceArchDesign.childImageSharp.fluid,
+    },
+    {
+      top: intl.formatMessage({ id: "home_services_2_top" }),
+      title: intl.formatMessage({ id: "home_services_2_title" }),
+      desc: intl.formatMessage({ id: "home_services_2_desc" }),
+      image: data.serviceInteriorDesign.childImageSharp.fluid,
+    },
+    {
+      top: intl.formatMessage({ id: "home_services_3_top" }),
+      title: intl.formatMessage({ id: "home_services_3_title" }),
+      desc: intl.formatMessage({ id: "home_services_3_desc" }),
+      image: data.serviceProject.childImageSharp.fluid,
+    },
+    {
+      top: intl.formatMessage({ id: "home_services_4_top" }),
+      title: intl.formatMessage({ id: "home_services_4_title" }),
+      desc: intl.formatMessage({ id: "home_services_4_desc" }),
+      image: data.serviceMep.childImageSharp.fluid,
+    },
+  ]
 
   return (
     <div className="home-services">
-      <SectionHeader top={headerFirstLine} bottom={headerSecondLine} />
+      <SectionHeader
+        top={intl.formatMessage({ id: "home_services_first" })}
+        bottom={intl.formatMessage({ id: "home_services_second" })}
+      />
 
-      <div className="bg-image">
-        <Img fluid={data.bg.childImageSharp.fluid} />
-      </div>
-
-      <div className="home-services--content">
-        {copyData.map(renderElement)}
-      </div>
+      <ArchServiceList services={services} />
 
       <div className="button-wrapper">
         <Link className="primary-button" to={"/services"}>
-          {buttonCopy}
+          {intl.formatMessage({ id: "portfolio" })}
         </Link>
       </div>
     </div>
