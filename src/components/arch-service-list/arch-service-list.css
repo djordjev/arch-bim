@@ -1,0 +1,26 @@
+.arch-service-list {
+  position: relative;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.arch-service-list--background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.arch-service-list--content {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .arch-service-list--content {
+    padding: 10px;
+  }
+}

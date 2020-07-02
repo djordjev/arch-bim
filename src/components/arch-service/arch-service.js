@@ -15,7 +15,11 @@ const ArchService = props => {
   return (
     <div className={classes}>
       <div className="arch-service--image">
-        <Img fluid={image} />
+        <Img
+          className="arch-service--image-div"
+          fluid={image}
+          objectFit="cover"
+        />
       </div>
       <div className="arch-service--copy">
         <div className="arch-service--top">{top}</div>

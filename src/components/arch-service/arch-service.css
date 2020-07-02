@@ -1,6 +1,8 @@
 .arch-service {
   display: flex;
   flex-wrap: nowrap;
+  margin-bottom: 20px;
+  height: 709px;
 }
 
 .arch-service--reverse {
@@ -12,13 +14,17 @@
   height: 100%;
 }
 
+.arch-service--image-div {
+  height: 100%;
+}
+
 .arch-service--copy {
   width: 50%;
   background-color: white;
   padding: 165px 130px;
-  height: 709px;
-  margin-bottom: 20px;
+  height: 100%;
   text-align: center;
+  z-index: 1;
 }
 
 .arch-service--top {
@@ -49,6 +55,7 @@
 @media screen and (max-width: 600px) {
   .arch-service {
     flex-direction: column;
+    height: 800px;
   }
 
   .arch-service--reverse {
@@ -57,14 +64,20 @@
 
   .arch-service--copy {
     width: 100%;
+    padding: 20px;
+    height: 50%;
   }
 
   .arch-service--image {
     width: 100%;
+    height: 50%;
   }
 
-  .arch-service--copy {
-    padding: 20px;
-    height: 400px;
+  .arch-service--top {
+    margin-bottom: 12px;
+  }
+
+  .arch-service--separator {
+    margin: 35px auto;
   }
 }
