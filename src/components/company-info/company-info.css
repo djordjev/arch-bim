@@ -28,4 +28,18 @@
 
 .company-info--background-wrapper {
   padding-top: 300px;
+  height: 1100px;
+}
+
+.company-info--background-wrapper div {
+  height: 800px;
+}
+
+.company-info--map {
+  height: 865px;
+  width: 667px;
+  position: absolute;
+  width: 50%;
+  left: 45%;
+  top: 200px;
 }
