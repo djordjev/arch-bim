@@ -9,14 +9,14 @@ import enMessages from "../i18n/en"
 import rsMessages from "../i18n/rs"
 import LocaleContext from "../utils/context"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   const langContext = React.useContext(LocaleContext)
   const rs = langContext === "rs"
   const langKey = rs ? "sr" : "en"
   const messages = rs ? rsMessages : enMessages
 
   return (
-    <>
+    <div className={className}>
       <IntlProvider locale={langKey} messages={messages}>
         <Header />
         <div
@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
           <Footer />
         </div>
       </IntlProvider>
-    </>
+    </div>
   )
 }
 

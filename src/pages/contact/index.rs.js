@@ -8,7 +8,7 @@ import LocaleContext from "../../utils/context"
 const IndexPage = () => {
   return (
     <LocaleContext.Provider value="rs">
-      <Layout>
+      <Layout className="contact-page">
         <SEO title="Contact" />
         <CompanyInfo />
       </Layout>
