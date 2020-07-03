@@ -8,6 +8,7 @@ import { IntlProvider } from "react-intl"
 import enMessages from "../i18n/en"
 import rsMessages from "../i18n/rs"
 import LocaleContext from "../utils/context"
+import ScrollTop from "../components/scroll-top/scroll-top"
 
 const Layout = ({ children, className }) => {
   const langContext = React.useContext(LocaleContext)
@@ -16,7 +17,7 @@ const Layout = ({ children, className }) => {
   const messages = rs ? rsMessages : enMessages
 
   return (
-    <div className={className}>
+    <div id="app-top-content" className={className}>
       <IntlProvider locale={langKey} messages={messages}>
         <Header />
         <div
@@ -27,6 +28,7 @@ const Layout = ({ children, className }) => {
           }}
         >
           <main>{children}</main>
+          <ScrollTop />
           <Footer />
         </div>
       </IntlProvider>

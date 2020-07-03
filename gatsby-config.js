@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-i18n",
