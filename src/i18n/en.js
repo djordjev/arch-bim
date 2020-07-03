@@ -49,6 +49,12 @@ const translation = {
   work_3_top: "INTERIOR",
   work_3_title: "PRIVATE APARTMENT IN BELGRADE",
   work_3_desc: `Interior design for private apartment in Belgrade`,
+  bim_architecture: "BIM ARCHITECTURE",
+  bim_projecting: "Building IN BIM",
+  address: "Address",
+  telephone: "Telephone",
+  general_inquiries: "General Inquiries",
+  contact_copy: `To reach us at our offices, please check out the map below with the address and directions.`,
 }
 
 export default translation

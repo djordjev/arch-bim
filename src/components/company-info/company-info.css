@@ -6,6 +6,14 @@
   position: relative;
 }
 
+.company-info .section-header {
+  width: 100%;
+}
+
+.company-info--content {
+  position: relative;
+}
+
 .company-info--address {
   width: 585px;
   max-width: 100%;
@@ -14,8 +22,12 @@
   border: 1px solid #eee;
   position: absolute;
   right: 50%;
-  top: 50px;
+  top: 0;
   padding: 85px;
+}
+
+.company-info--address div {
+  margin-bottom: 25px;
 }
 
 .company-info--address h2 {
@@ -41,5 +53,26 @@
   position: absolute;
   width: 50%;
   left: 45%;
-  top: 200px;
+  top: 150px;
+}
+
+@media screen and (max-width: 1000px) {
+  .company-info--address {
+    right: 0;
+    position: relative;
+    padding: 40px;
+    height: 373px;
+  }
+
+  .company-info--map {
+    width: 90%;
+    left: 5%;
+    top: 0;
+    position: relative;
+    height: 500px;
+  }
+
+  .company-info--background-wrapper {
+    display: none;
+  }
 }

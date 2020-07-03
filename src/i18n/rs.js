@@ -49,6 +49,12 @@ const translation = {
   work_3_top: "DIZAJN",
   work_3_title: "PRIVATNI STAN U BEOGRADU",
   work_3_desc: `Privatni stan u ulici Dimitrija Tucovića, Beograd`,
+  bim_architecture: "BIM ARHITEKTURA",
+  bim_projecting: "Projektovanje u BIM-u",
+  address: "Adresa",
+  telephone: "Telefon",
+  general_inquiries: "E-Mail",
+  contact_copy: `Kontaktirajte nas putem maila ili telefona`,
 }
 
 export default translation
