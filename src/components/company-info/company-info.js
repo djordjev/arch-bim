@@ -25,6 +25,44 @@ const CompanyInfo = () => {
     }
   `)
 
+  const renderMap = () => {
+    if (typeof window === "undefined") return null
+
+    return (
+      <Map
+        center={center}
+        zoom={16}
+        style={{ height: "100%", width: "100%" }}
+        dragging={!L.Browser.mobile}
+        tap={!L.Browser.mobile}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <Marker
+          position={center}
+          onClick={() => {
+            setPopup(true)
+          }}
+        />
+
+        {popup && (
+          <Popup
+            position={center}
+            onClose={() => {
+              setPopup(false)
+            }}
+          >
+            <h2>Arch-BIM</h2>
+            <div>Svetog Nikole 132/2</div>
+            <div>+381 64 9595 165</div>
+          </Popup>
+        )}
+      </Map>
+    )
+  }
+
   return (
     <div className="company-info">
       <SectionHeader
@@ -57,39 +95,7 @@ const CompanyInfo = () => {
           <div>{intl.formatMessage({ id: "contact_copy" })}</div>
         </div>
 
-        <div className="company-info--map">
-          <Map
-            center={center}
-            zoom={16}
-            style={{ height: "100%", width: "100%" }}
-            dragging={!L.Browser.mobile}
-            tap={!L.Browser.mobile}
-          >
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <Marker
-              position={center}
-              onClick={() => {
-                setPopup(true)
-              }}
-            />
-
-            {popup && (
-              <Popup
-                position={center}
-                onClose={() => {
-                  setPopup(false)
-                }}
-              >
-                <h2>Arch-BIM</h2>
-                <div>Svetog Nikole 132/2</div>
-                <div>+381 64 9595 165</div>
-              </Popup>
-            )}
-          </Map>
-        </div>
+        <div className="company-info--map">{renderMap()}</div>
       </div>
     </div>
   )
