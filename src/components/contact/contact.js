@@ -21,9 +21,30 @@ const Contact = () => {
       <form
         method="POST"
         className="contact-form"
-        data-netlify-recaptcha="true"
+        name="contact"
+        data-netlify-honeypot="bot-field"
         data-netlify="true"
       >
+        <p hidden>
+          <label>
+            Name{" "}
+            <input
+              aria-label="form-name"
+              type="hidden"
+              id="form-name"
+              name="form-name"
+              value="contact"
+            />
+          </label>
+        </p>
+
+        <p hidden>
+          <label>
+            Don’t fill this out:{" "}
+            <input aria-label="bot-field" name="bot-field" />
+          </label>
+        </p>
+
         <label htmlFor="name">Name</label>
         <input
           aria-label="name"
@@ -41,6 +62,15 @@ const Contact = () => {
           name="email"
           placeholder="E-Mail"
           id="email"
+        />
+        <label htmlFor="subject">Subject</label>
+        <input
+          aria-label="subject"
+          className="input-field subject"
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          id="subject"
         />
         <label htmlFor="message">Message</label>
         <textarea

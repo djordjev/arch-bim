@@ -37,6 +37,10 @@
   height: 150px;
 }
 
+.subject {
+  width: 100%;
+}
+
 .contact-button {
   background-color: var(--color-purple);
   min-width: 240px;
