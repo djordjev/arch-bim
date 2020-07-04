@@ -9,8 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import LocaleContext from "../utils/context"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,6 +25,9 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
+
+  const localeContext = React.useContext(LocaleContext)
+  const lang = localeContext === "en" ? "en" : "sr"
 
   const metaDescription = description || site.siteMetadata.description
 

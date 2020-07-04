@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Arch-BIM Revit Architecture Services`,
+    description: `Revit BIM Architecture and Interior Design outsourcing.`,
+    author: `Arch-BIM`,
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,
