@@ -16,7 +16,7 @@ const Footer = () => {
       background: file(relativePath: { eq: "blue-background.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -24,7 +24,7 @@ const Footer = () => {
       landscape: file(relativePath: { eq: "landscape-icon.png" }) {
         childImageSharp {
           fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -32,7 +32,7 @@ const Footer = () => {
       interior: file(relativePath: { eq: "interior-design-icon.png" }) {
         childImageSharp {
           fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -40,7 +40,7 @@ const Footer = () => {
       structure: file(relativePath: { eq: "structure-design-icon.png" }) {
         childImageSharp {
           fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

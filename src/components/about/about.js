@@ -11,7 +11,7 @@ const About = () => {
       head: file(relativePath: { eq: "blue-background.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 750) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -19,7 +19,7 @@ const About = () => {
       background: file(relativePath: { eq: "about-us-bg.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 550) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

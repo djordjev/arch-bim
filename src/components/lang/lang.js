@@ -10,14 +10,14 @@ const Lang = props => {
       rs: file(relativePath: { eq: "rs.png" }) {
         childImageSharp {
           fluid(maxWidth: 50) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       en: file(relativePath: { eq: "en.png" }) {
         childImageSharp {
           fluid(maxWidth: 50) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

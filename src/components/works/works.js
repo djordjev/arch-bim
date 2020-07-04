@@ -14,7 +14,7 @@ const Works = () => {
       trainStation: file(relativePath: { eq: "service-arch-design.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -22,7 +22,7 @@ const Works = () => {
       businessBuilding: file(relativePath: { eq: "building.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -30,7 +30,7 @@ const Works = () => {
       interior: file(relativePath: { eq: "interior.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

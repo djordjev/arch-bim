@@ -12,7 +12,7 @@ const Services = () => {
       serviceArchDesign: file(relativePath: { eq: "service-arch-design.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -22,7 +22,7 @@ const Services = () => {
       ) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -30,7 +30,7 @@ const Services = () => {
       serviceProject: file(relativePath: { eq: "service-project.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -38,7 +38,7 @@ const Services = () => {
       serviceMep: file(relativePath: { eq: "service-mep.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
