@@ -19,9 +19,10 @@ const Contact = () => {
       <SectionHeader top={top} bottom={bottom} />
 
       <form
-        action="https://getform.io/f/b6b211be-e630-40c7-b4d1-01a9bf16b35b"
         method="POST"
         className="contact-form"
+        data-netlify-recaptcha="true"
+        data-netlify="true"
       >
         <label htmlFor="name">Name</label>
         <input
