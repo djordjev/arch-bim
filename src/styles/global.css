@@ -3,6 +3,10 @@
   --color-purple: rgb(111, 111, 203);
 }
 
+body {
+  font-family: "Roboto Mono";
+}
+
 #overlay {
   position: absolute;
   top: 0;
