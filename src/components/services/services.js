@@ -1,17 +1,25 @@
 import React from "react"
-import SlideShow from "../../components/slide-show/slide-show"
 import ArchServiceList from "../../components/arch-service-list/arch-service-list"
 import { useIntl } from "react-intl"
 import { useStaticQuery, graphql } from "gatsby"
+import HeroImage from "../../components/hero-image/hero-image"
 
 const Services = () => {
   const intl = useIntl()
 
   const data = useStaticQuery(graphql`
     query {
+      hero: file(relativePath: { eq: "hero1.jpg" }) {
+        childImageSharp {
+          fluid(maxHeight: 1080, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
       serviceArchDesign: file(relativePath: { eq: "service-arch-design.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -21,7 +29,7 @@ const Services = () => {
         relativePath: { eq: "service-interior-design.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -29,7 +37,7 @@ const Services = () => {
 
       serviceProject: file(relativePath: { eq: "service-project.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -37,7 +45,7 @@ const Services = () => {
 
       serviceMep: file(relativePath: { eq: "service-mep.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -74,8 +82,10 @@ const Services = () => {
 
   return (
     <div>
-      <SlideShow />
-      <ArchServiceList services={services} />
+      <HeroImage image={data.hero.childImageSharp.fluid} />
+      <div className="scroll-target">
+        <ArchServiceList services={services} />
+      </div>
     </div>
   )
 }

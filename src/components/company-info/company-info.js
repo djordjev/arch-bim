@@ -17,7 +17,7 @@ const CompanyInfo = () => {
     query {
       background: file(relativePath: { eq: "blue-background.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 700) {
+          fluid(maxHeight: 700, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

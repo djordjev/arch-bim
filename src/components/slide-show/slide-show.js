@@ -34,13 +34,11 @@ const SlideShow = () => {
       <BackgroundSlider
         query={useStaticQuery(graphql`
           query {
-            backgrounds: allFile(
-              filter: { sourceInstanceName: { eq: "slideshow" } }
-            ) {
+            backgrounds: allFile(filter: { name: { regex: "/hero*/" } }) {
               nodes {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 4000, quality: 100) {
+                  fluid(maxWidth: 1920, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

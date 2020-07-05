@@ -2,15 +2,24 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "react-intl"
+import HeroImage from "../../components/hero-image/hero-image"
 import "./about.css"
 
 const About = () => {
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
+      hero: file(relativePath: { eq: "hero3.jpg" }) {
+        childImageSharp {
+          fluid(maxHeight: 1080, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
       head: file(relativePath: { eq: "blue-background.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 750) {
+          fluid(maxHeight: 750, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -18,7 +27,7 @@ const About = () => {
 
       background: file(relativePath: { eq: "about-us-bg.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 550) {
+          fluid(maxHeight: 550, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -28,9 +37,9 @@ const About = () => {
 
   return (
     <div>
-      <Img fluid={data.head.childImageSharp.fluid} />
+      <HeroImage image={data.hero.childImageSharp.fluid} />
 
-      <div className="about--content">
+      <div className="about--content scroll-target">
         <Img
           className="about--bg"
           fluid={data.background.childImageSharp.fluid}
