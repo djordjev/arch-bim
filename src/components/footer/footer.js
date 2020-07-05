@@ -92,8 +92,8 @@ const Footer = () => {
           <Link to="/">{homeCopy}</Link>
           <Link to="/about">{aboutCopy}</Link>
           <Link to="/services">{servicesCopy}</Link>
-          <Link to="/contact">{contactCopy}</Link>
           <Link to="/works">{worksCopy}</Link>
+          <Link to="/contact">{contactCopy}</Link>
         </div>
         <div className="footer-tm">Arch-Bim, All Rights Reserved</div>
       </div>

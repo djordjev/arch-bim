@@ -92,7 +92,7 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
-            variants: [`400`, `900`],
+            variants: [`300`, `900`],
             subsets: [`latin`],
           },
         ],

@@ -35,11 +35,11 @@ const Menu = props => {
       <Link className="menu-item" to="/services">
         {servicesCopy}
       </Link>
-      <Link className="menu-item" to="/contact">
-        {contactCopy}
-      </Link>
       <Link className="menu-item" to="/works">
         {worksCopy}
+      </Link>
+      <Link className="menu-item" to="/contact">
+        {contactCopy}
       </Link>
       <div className="vertical-line" />
     </div>
