@@ -13,9 +13,9 @@ const Footer = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      background: file(relativePath: { eq: "blue-background.jpg" }) {
+      background: file(relativePath: { eq: "parallax-bg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxHeight: 1300, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -65,7 +65,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <Parallax height={400} image={data.background.childImageSharp.fluid}>
+      <Parallax height={500} image={data.background.childImageSharp.fluid}>
         <h2>{headerTitle}</h2>
         <div className="parallax-remaining-services">
           {copy.map((c, i) => (
