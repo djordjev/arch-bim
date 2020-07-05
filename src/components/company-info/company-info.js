@@ -15,9 +15,9 @@ const CompanyInfo = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      background: file(relativePath: { eq: "blue-background.jpg" }) {
+      background: file(relativePath: { eq: "contact-bg.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 700, quality: 100) {
+          fluid(maxHeight: 904, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
