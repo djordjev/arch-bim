@@ -1,28 +1,12 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import LocaleContext from "../../utils/context"
 
 import "./lang.css"
 
 const Lang = props => {
-  const data = useStaticQuery(graphql`
-    query {
-      rs: file(relativePath: { eq: "rs.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 50) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      en: file(relativePath: { eq: "en.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 50) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
+  const langContext = React.useContext(LocaleContext)
+  const rsSelected = langContext === "en" ? "" : "lang-selected"
+  const enSelected = langContext === "en" ? "lang-selected" : ""
 
   const onSerbian = () => {
     if (typeof window === `undefined`) return false
@@ -48,12 +32,12 @@ const Lang = props => {
 
   return (
     <div className="lang">
-      <button className="lang-btn" onClick={onSerbian}>
-        <Img fluid={data.rs.childImageSharp.fluid} />
+      <button className={`lang-btn ${enSelected}`} onClick={onEnglish}>
+        EN
       </button>
 
-      <button className="lang-btn" onClick={onEnglish}>
-        <Img fluid={data.en.childImageSharp.fluid} />
+      <button className={`lang-btn ${rsSelected}`} onClick={onSerbian}>
+        RS
       </button>
     </div>
   )

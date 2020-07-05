@@ -33,7 +33,7 @@ const HomeDescription = props => {
   `)
 
   return (
-    <div className="home-description">
+    <div className="home-description scroll-target">
       <div className="home-description--content">
         <div className="home-description--primary">
           <Img fluid={data.hall.childImageSharp.fluid} />

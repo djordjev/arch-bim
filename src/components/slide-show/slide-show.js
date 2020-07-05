@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundSlider from "gatsby-image-background-slider"
 import { useIntl } from "react-intl"
+import { AiOutlineArrowDown } from "react-icons/ai/index"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import "./slide-show.css"
 
@@ -22,6 +24,10 @@ const SlideShow = () => {
       description: intl.formatMessage({ id: "slide_show_3_description" }),
     },
   ]
+
+  const onClick = () => {
+    scrollTo(".scroll-target")
+  }
 
   return (
     <div className="slideshow">
@@ -51,6 +57,7 @@ const SlideShow = () => {
           <div className="slideshow--text" key={c.header}>
             <h2>{c.header}</h2>
             <div>{c.description}</div>
+            <AiOutlineArrowDown color="white" size={50} onClick={onClick} />
           </div>
         ))}
       </BackgroundSlider>

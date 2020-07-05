@@ -4,7 +4,12 @@
 }
 
 body {
-  font-family: "Roboto Mono";
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+body h2 {
+  font-weight: 900;
 }
 
 #overlay {
