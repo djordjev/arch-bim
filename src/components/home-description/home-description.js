@@ -38,8 +38,10 @@ const HomeDescription = props => {
         <div className="home-description--primary">
           <Img fluid={data.hall.childImageSharp.fluid} />
           <div className="home-description--copy">
-            <h2>{primaryTitle}</h2>
-            <div>{primaryDescription}</div>
+            <h2 className="u-font-weight-bold u-font-size-title">
+              {primaryTitle}
+            </h2>
+            <div className="u-font-size-normal">{primaryDescription}</div>
           </div>
 
           <div className="home-description--interior">
@@ -48,8 +50,10 @@ const HomeDescription = props => {
 
           <div className="home-description--secondary">
             <div className="home-description-secondary--copy">
-              <h2>{secondaryTitle}</h2>
-              <div>{secondaryDescription}</div>
+              <h2 className="u-font-weight-bold u-font-size-title">
+                {secondaryTitle}
+              </h2>
+              <div className="u-font-size-normal">{secondaryDescription}</div>
             </div>
           </div>
         </div>

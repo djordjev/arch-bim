@@ -34,3 +34,29 @@ body h2 {
 .primary-button:hover {
   opacity: 0.8;
 }
+
+.u-font-weight-bold {
+  font-weight: 900;
+}
+
+.u-font-weight-normal {
+  font-weight: 300;
+}
+
+.u-font-size-title {
+  font-weight: 37px;
+}
+
+.u-font-size-normal {
+  font-weight: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .u-font-size-title {
+    font-weight: 30px;
+  }
+
+  .u-font-size-normal {
+    font-weight: 18px;
+  }
+}

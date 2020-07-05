@@ -28,7 +28,6 @@
 }
 
 .arch-service--top {
-  font-weight: bold;
   color: rgb(144, 144, 167);
   letter-spacing: 4px;
   margin-bottom: 40px;
@@ -49,7 +48,6 @@
 
 .arch-service--desc {
   color: rgb(144, 144, 167);
-  font-size: 19px;
 }
 
 @media screen and (max-width: 600px) {

@@ -34,6 +34,14 @@
     padding-top: 20px;
   }
 
+  .section-header--top {
+    font-size: 17px;
+  }
+
+  .section-header--bottom {
+    font-size: 42px;
+  }
+
   .section-header--separator {
     height: 40px;
   }

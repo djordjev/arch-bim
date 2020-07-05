@@ -15,6 +15,7 @@
   top: 0;
   left: 0;
   color: white;
+  padding: 4%;
 }
 
 .parallax-children h2 {
@@ -22,13 +23,11 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   width: 80%;
   margin: 40px auto;
-  font-size: 85px;
   padding-bottom: 50px;
 }
 
 @media screen and (max-width: 1200px) {
   .parallax-children h2 {
-    font-size: 30px;
     padding-bottom: 25px;
     margin: 20px auto;
   }

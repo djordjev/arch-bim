@@ -66,7 +66,7 @@ const Footer = () => {
   return (
     <footer>
       <Parallax height={500} image={data.background.childImageSharp.fluid}>
-        <h2>{headerTitle}</h2>
+        <h2 className="u-font-size-title u-font-weight-bold">{headerTitle}</h2>
         <div className="parallax-remaining-services">
           {copy.map((c, i) => (
             <div key={c}>
@@ -74,7 +74,7 @@ const Footer = () => {
                 className="parallax-icon"
                 fluid={data[icons[i]].childImageSharp.fluid}
               />
-              <div>{c}</div>
+              <div className="u-font-weight-bold u-font-size-normal">{c}</div>
             </div>
           ))}
         </div>

@@ -22,12 +22,12 @@ const ArchService = props => {
         />
       </div>
       <div className="arch-service--copy">
-        <div className="arch-service--top">{top}</div>
+        <div className="arch-service--top u-font-weight-bold">{top}</div>
         <div className="arch-service--title">{title}</div>
 
         <div className="arch-service--separator" />
 
-        <div className="arch-service--desc">{desc}</div>
+        <div className="arch-service--desc u-font-size-normal">{desc}</div>
       </div>
     </div>
   )
