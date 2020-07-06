@@ -4,9 +4,9 @@ import Img from "gatsby-image"
 import Parallax from "../../components/parallax/parallax"
 import Contact from "../../components/contact/contact"
 import { useIntl } from "react-intl"
+import Link from "../../utils/link"
 
 import "./footer.css"
-import Link from "../../utils/link"
 
 const Footer = () => {
   const intl = useIntl()

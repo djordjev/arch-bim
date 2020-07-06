@@ -25,14 +25,9 @@
   text-transform: uppercase;
 }
 
-.hero-image--logo {
-  background-color: white;
-  width: 150px;
-}
-
 .hero-image--text h2 {
   color: white;
-  font-size: 66px;
+  font-size: 45px;
 }
 
 .hero-image--text div {

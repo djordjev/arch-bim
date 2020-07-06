@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "react-intl"
 import HeroImage from "../../components/hero-image/hero-image"
+
 import "./about.css"
 
 const About = () => {
@@ -12,6 +13,14 @@ const About = () => {
       hero: file(relativePath: { eq: "hero3.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 1080, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 150, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -48,7 +57,13 @@ const About = () => {
 
         <div className="about--copy">
           <h2>{intl.formatMessage({ id: "about_us" })}</h2>
-          <p>{intl.formatMessage({ id: "about_us_copy" })}</p>
+
+          <div className="about-copy--content">
+            <p>{intl.formatMessage({ id: "about_us_copy" })}</p>
+            <div className="about--logo">
+              <Img fluid={data.logo.childImageSharp.fluid} />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -2,10 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "react-intl"
-import "./company-info.css"
 import { Map, Marker, Popup, TileLayer } from "react-leaflet"
 import SectionHeader from "../section-header/section-header"
 import L from "leaflet"
+
+import "./company-info.css"
 
 const CompanyInfo = () => {
   const intl = useIntl()

@@ -3,12 +3,13 @@ import PropTypes from "prop-types"
 import Footer from "./footer/footer"
 
 import Header from "./header/header"
-import "./layout.css"
 import { IntlProvider } from "react-intl"
 import enMessages from "../i18n/en"
 import rsMessages from "../i18n/rs"
 import LocaleContext from "../utils/context"
 import ScrollTop from "../components/scroll-top/scroll-top"
+
+import "./layout.css"
 
 const Layout = ({ children, className }) => {
   const langContext = React.useContext(LocaleContext)

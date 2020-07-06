@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import ArchService from "../arch-service/arch-service"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+
 import "./arch-service-list.css"
 
 const ArchServiceList = props => {
