@@ -1,10 +1,10 @@
-import React from "react"
-import Img from "gatsby-image"
-import { useIntl } from "react-intl"
-import { AiOutlineArrowDown } from "react-icons/ai/index"
-import scrollTo from "gatsby-plugin-smoothscroll"
-
 import "./hero-image.css"
+
+import { AiOutlineArrowDown } from "react-icons/ai"
+import Img from "gatsby-image"
+import React from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import { useIntl } from "react-intl"
 
 const HeroImage = props => {
   const { image } = props

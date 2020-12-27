@@ -1,11 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundSlider from "gatsby-image-background-slider"
-import { useIntl } from "react-intl"
-import { AiOutlineArrowDown } from "react-icons/ai/index"
-import scrollTo from "gatsby-plugin-smoothscroll"
-
 import "./slide-show.css"
+
+import { graphql, useStaticQuery } from "gatsby"
+
+import { AiOutlineArrowDown } from "react-icons/ai"
+import BackgroundSlider from "gatsby-image-background-slider"
+import React from "react"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import { useIntl } from "react-intl"
 
 const SlideShow = () => {
   const intl = useIntl()

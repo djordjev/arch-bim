@@ -1,7 +1,8 @@
+import "./scroll-top.css"
+
+import { AiOutlineArrowUp } from "react-icons/ai"
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { AiOutlineArrowUp } from "react-icons/ai/index"
-import "./scroll-top.css"
 
 const ScrollTop = () => {
   const [shown, setShown] = React.useState(false)

@@ -1,12 +1,13 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { useIntl } from "react-intl"
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
-import SectionHeader from "../section-header/section-header"
-import L from "leaflet"
-
 import "./company-info.css"
+
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
+import { graphql, useStaticQuery } from "gatsby"
+
+import Img from "gatsby-image"
+import L from "leaflet"
+import React from "react"
+import SectionHeader from "../section-header/section-header"
+import { useIntl } from "react-intl"
 
 const CompanyInfo = () => {
   const intl = useIntl()
@@ -18,7 +19,7 @@ const CompanyInfo = () => {
       background: file(relativePath: { eq: "contact-bg.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 904, quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
