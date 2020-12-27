@@ -15,7 +15,7 @@ const Footer = () => {
     query {
       background: file(relativePath: { eq: "parallax-bg.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 1300, quality: 100) {
+          fluid(maxHeight: 1300, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -23,7 +23,7 @@ const Footer = () => {
 
       landscape: file(relativePath: { eq: "landscape-icon.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100, quality: 100) {
+          fluid(maxWidth: 100, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -31,7 +31,7 @@ const Footer = () => {
 
       interior: file(relativePath: { eq: "interior-design-icon.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100, quality: 100) {
+          fluid(maxWidth: 100, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -39,7 +39,7 @@ const Footer = () => {
 
       structure: file(relativePath: { eq: "structure-design-icon.png" }) {
         childImageSharp {
-          fluid(maxWidth: 100, quality: 100) {
+          fluid(maxWidth: 100, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

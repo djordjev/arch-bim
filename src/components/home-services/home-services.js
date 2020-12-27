@@ -14,7 +14,7 @@ const HomeServices = props => {
     query {
       serviceArchDesign: file(relativePath: { eq: "service-arch-design.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 1920, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -24,7 +24,7 @@ const HomeServices = props => {
         relativePath: { eq: "service-interior-design.jpg" }
       ) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 1920, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -32,7 +32,7 @@ const HomeServices = props => {
 
       serviceProject: file(relativePath: { eq: "service-project.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 1920, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -40,7 +40,7 @@ const HomeServices = props => {
 
       serviceMep: file(relativePath: { eq: "service-mep.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
+          fluid(maxWidth: 1920, quality: 60) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
