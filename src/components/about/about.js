@@ -12,7 +12,7 @@ const About = () => {
     query {
       hero: file(relativePath: { eq: "hero3.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 1080, quality: 60) {
+          fluid(maxHeight: 1080, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -20,7 +20,7 @@ const About = () => {
 
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 150, quality: 60) {
+          fluid(maxWidth: 150, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -28,7 +28,7 @@ const About = () => {
 
       head: file(relativePath: { eq: "blue-background.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 750, quality: 60) {
+          fluid(maxHeight: 750, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -36,7 +36,7 @@ const About = () => {
 
       background: file(relativePath: { eq: "about-us-bg.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 550, quality: 60) {
+          fluid(maxHeight: 550, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

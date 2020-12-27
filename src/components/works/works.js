@@ -14,7 +14,7 @@ const Works = () => {
     query {
       hero: file(relativePath: { eq: "hero2.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 1080, quality: 60) {
+          fluid(maxHeight: 1080, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -22,7 +22,7 @@ const Works = () => {
 
       trainStation: file(relativePath: { eq: "service-arch-design.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 60) {
+          fluid(maxWidth: 1920, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -30,7 +30,7 @@ const Works = () => {
 
       businessBuilding: file(relativePath: { eq: "building.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 60) {
+          fluid(maxWidth: 1920, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -38,7 +38,7 @@ const Works = () => {
 
       interior: file(relativePath: { eq: "interior.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 60) {
+          fluid(maxWidth: 1920, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

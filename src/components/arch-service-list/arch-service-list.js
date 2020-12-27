@@ -13,7 +13,7 @@ const ArchServiceList = props => {
     query {
       bg: file(relativePath: { eq: "works-bg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 60) {
+          fluid(maxWidth: 1920, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

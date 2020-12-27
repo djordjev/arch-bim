@@ -16,7 +16,7 @@ const HomeDescription = props => {
     query {
       hall: file(relativePath: { eq: "hall.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 877, quality: 60) {
+          fluid(maxHeight: 877, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -24,7 +24,7 @@ const HomeDescription = props => {
 
       interior: file(relativePath: { eq: "interior.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 527, quality: 60) {
+          fluid(maxHeight: 527, quality: 75) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
