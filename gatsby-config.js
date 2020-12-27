@@ -3,6 +3,7 @@ module.exports = {
     title: `Arch-BIM Revit Architecture Services`,
     description: `Revit BIM Architecture and Interior Design outsourcing.`,
     author: `Arch-BIM`,
+    siteUrl: `https://www.arch-bim.com`,
   },
   plugins: [
     {
@@ -84,6 +85,15 @@ module.exports = {
       options: {
         fonts: [`roboto\:300,500,900`],
         display: "swap",
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.arch-bim.com",
+        sitemap: "https://www.arch-bim.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],
