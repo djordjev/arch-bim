@@ -44,19 +44,19 @@ body h2 {
 }
 
 .u-font-size-title {
-  font-weight: 37px;
+  font-weight: 900;
 }
 
 .u-font-size-normal {
-  font-weight: 20px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 600px) {
   .u-font-size-title {
-    font-weight: 30px;
+    font-weight: 900;
   }
 
   .u-font-size-normal {
-    font-weight: 18px;
+    font-weight: 500;
   }
 }

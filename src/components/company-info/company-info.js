@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "react-intl"
-import { Map, Marker, Popup, TileLayer } from "react-leaflet"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import SectionHeader from "../section-header/section-header"
 import L from "leaflet"
 
@@ -10,7 +10,6 @@ import "./company-info.css"
 
 const CompanyInfo = () => {
   const intl = useIntl()
-  const [popup, setPopup] = React.useState(false)
 
   const center = [44.80361, 20.494803]
 
@@ -30,7 +29,7 @@ const CompanyInfo = () => {
     if (typeof window === "undefined") return null
 
     return (
-      <Map
+      <MapContainer
         center={center}
         zoom={16}
         style={{ height: "100%", width: "100%" }}
@@ -41,26 +40,14 @@ const CompanyInfo = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <Marker
-          position={center}
-          onClick={() => {
-            setPopup(true)
-          }}
-        />
-
-        {popup && (
-          <Popup
-            position={center}
-            onClose={() => {
-              setPopup(false)
-            }}
-          >
+        <Marker position={center}>
+          <Popup position={center}>
             <h2>Arch-BIM</h2>
             <div>Svetog Nikole 132/2</div>
             <div>+381 64 9595 165</div>
           </Popup>
-        )}
-      </Map>
+        </Marker>
+      </MapContainer>
     )
   }
 

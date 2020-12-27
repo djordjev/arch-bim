@@ -1,10 +1,11 @@
-import React from "react"
-import HeroImage from "../../components/hero-image/hero-image"
-import { useIntl } from "react-intl"
-import { useStaticQuery, graphql } from "gatsby"
-import ArchServiceList from "../arch-service-list/arch-service-list"
-
 import "./works.css"
+
+import { graphql, useStaticQuery } from "gatsby"
+
+import ArchServiceList from "../arch-service-list/arch-service-list"
+import HeroImage from "../../components/hero-image/hero-image"
+import React from "react"
+import { useIntl } from "react-intl"
 
 const Works = () => {
   const intl = useIntl()
