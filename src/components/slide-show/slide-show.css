@@ -6,6 +6,14 @@
   text-shadow: 1px 1px grey;
 }
 
+.slideshow--slide {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: opacity 2s;
+  width: 100%;
+}
+
 .slideshow--text {
   position: absolute;
   height: 100%;
@@ -15,6 +23,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  top: 0;
 }
 
 .slideshow--text h2 {

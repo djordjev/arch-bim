@@ -3,13 +3,40 @@ import "./slide-show.css"
 import { graphql, useStaticQuery } from "gatsby"
 
 import { AiOutlineArrowDown } from "react-icons/ai"
-import BackgroundSlider from "gatsby-image-background-slider"
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { useIntl } from "react-intl"
+import Img from "gatsby-image"
+
+const INTERVAL = 10000
 
 const SlideShow = () => {
+  const [current, setCurrent] = React.useState(0)
   const intl = useIntl()
+  const data = useStaticQuery(graphql`
+    query {
+      backgrounds: allFile(filter: { name: { regex: "/hero*/" } }) {
+        nodes {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 75) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+      mBackgrounds: allFile(filter: { name: { regex: "/mwh*/" } }) {
+        nodes {
+          relativePath
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 75) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  `)
 
   const copy = [
     {
@@ -30,36 +57,43 @@ const SlideShow = () => {
     scrollTo(".scroll-target")
   }
 
+  const renderCurrent = c => {
+    const isShown = c === current
+    const opacity = isShown ? 1 : 0
+
+    const src = [
+      data.mBackgrounds.nodes[c].childImageSharp.fluid,
+      {
+        ...data.backgrounds.nodes[c].childImageSharp.fluid,
+        media: `(min-width: 1024px)`,
+      },
+    ]
+
+    return (
+      <div className="slideshow--slide" style={{ opacity }}>
+        <Img alt="hero" fluid={src} />
+        <div className="slideshow--text" key={copy[c].header}>
+          <h2>{copy[c].header}</h2>
+          <div>{copy[c].description}</div>
+          <AiOutlineArrowDown color="white" size={50} onClick={onClick} />
+        </div>
+      </div>
+    )
+  }
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      const newCurrent = (current + 1) % 3
+      setCurrent(newCurrent)
+    }, INTERVAL)
+    return () => clearInterval(interval)
+  }, [current])
+
   return (
     <div className="slideshow">
-      <BackgroundSlider
-        query={useStaticQuery(graphql`
-          query {
-            backgrounds: allFile(filter: { name: { regex: "/hero*/" } }) {
-              nodes {
-                relativePath
-                childImageSharp {
-                  fluid(maxWidth: 1920, quality: 75) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
-          }
-        `)}
-        initDelay={2}
-        transition={4}
-        duration={10}
-        images={["hero1.jpg", "hero2.jpg", "hero3.jpg"]}
-      >
-        {copy.map(c => (
-          <div className="slideshow--text" key={c.header}>
-            <h2>{c.header}</h2>
-            <div>{c.description}</div>
-            <AiOutlineArrowDown color="white" size={50} onClick={onClick} />
-          </div>
-        ))}
-      </BackgroundSlider>
+      {renderCurrent(0)}
+      {renderCurrent(1)}
+      {renderCurrent(2)}
     </div>
   )
 }
