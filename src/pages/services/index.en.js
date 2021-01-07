@@ -9,7 +9,10 @@ const IndexPage = () => {
   return (
     <LocaleContext.Provider value="en">
       <Layout>
-        <SEO title="Services" />
+        <SEO
+          title="Services"
+          description="Outsource BIM professional or team for various types of architectural, interior and structural design."
+        />
         <Services />
       </Layout>
     </LocaleContext.Provider>

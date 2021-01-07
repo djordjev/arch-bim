@@ -9,7 +9,10 @@ const IndexPage = () => {
   return (
     <LocaleContext.Provider value="en">
       <Layout className="contact-page">
-        <SEO title="Contact" />
+        <SEO
+          title="Contact"
+          description="Contact us for hiring or outsourcing Revit professional."
+        />
         <CompanyInfo />
       </Layout>
     </LocaleContext.Provider>

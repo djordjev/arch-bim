@@ -9,7 +9,10 @@ const IndexPage = () => {
   return (
     <LocaleContext.Provider value="rs">
       <Layout>
-        <SEO title="O Nama" />
+        <SEO
+          title="O Nama"
+          description="Tim arhitekata, dizajnera i inženjera, iskusnih u projektovanju u Autodesk Revit okruženju."
+        />
         <About />
       </Layout>
     </LocaleContext.Provider>

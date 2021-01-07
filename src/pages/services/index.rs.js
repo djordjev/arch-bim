@@ -9,7 +9,10 @@ const IndexPage = () => {
   return (
     <LocaleContext.Provider value="rs">
       <Layout>
-        <SEO title="Usluge" />
+        <SEO
+          title="Usluge"
+          description="Projektovanje poslovnih i stambenih objekata po standardima i potrebama klijenta."
+        />
         <Services />
       </Layout>
     </LocaleContext.Provider>
