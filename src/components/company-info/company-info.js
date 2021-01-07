@@ -9,6 +9,19 @@ import React from "react"
 import SectionHeader from "../section-header/section-header"
 import { useIntl } from "react-intl"
 
+import "leaflet/dist/leaflet.css"
+
+import icon from "leaflet/dist/images/marker-icon.png"
+import iconShadow from "leaflet/dist/images/marker-shadow.png"
+
+let DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+  iconAnchor: [12, 40],
+})
+
+L.Marker.prototype.options.icon = DefaultIcon
+
 const CompanyInfo = () => {
   const intl = useIntl()
 
