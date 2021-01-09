@@ -19,7 +19,7 @@ const SlideShow = () => {
         nodes {
           relativePath
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 75) {
+            fluid(maxWidth: 1920, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -29,7 +29,7 @@ const SlideShow = () => {
         nodes {
           relativePath
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 75) {
+            fluid(maxWidth: 1920, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
