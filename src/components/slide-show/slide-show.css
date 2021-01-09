@@ -14,6 +14,11 @@
   width: 100%;
 }
 
+.slideshow--image {
+  height: 100%;
+  width: 100%;
+}
+
 .slideshow--text {
   position: absolute;
   height: 100%;

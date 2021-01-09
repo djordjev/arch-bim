@@ -71,7 +71,12 @@ const SlideShow = () => {
 
     return (
       <div className="slideshow--slide" style={{ opacity }}>
-        <Img alt="hero" fluid={src} />
+        <Img
+          alt="hero"
+          className="slideshow--image"
+          fluid={src}
+          objectFit="cover"
+        />
         <div className="slideshow--text" key={copy[c].header}>
           <h2>{copy[c].header}</h2>
           <div>{copy[c].description}</div>
