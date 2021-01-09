@@ -80,13 +80,6 @@ module.exports = {
         id: "portal",
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto\:300,500,900`],
-        display: "swap",
-      },
-    },
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",

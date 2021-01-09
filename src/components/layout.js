@@ -10,6 +10,9 @@ import LocaleContext from "../utils/context"
 import ScrollTop from "../components/scroll-top/scroll-top"
 
 import "./layout.css"
+import "@fontsource/roboto/300.css"
+import "@fontsource/roboto/500.css"
+import "@fontsource/roboto/900.css"
 
 const Layout = ({ children, className }) => {
   const langContext = React.useContext(LocaleContext)
