@@ -14,6 +14,16 @@ const Contact = () => {
   const message = intl.formatMessage({ id: "message" })
   const send = intl.formatMessage({ id: "send" })
 
+  const onClick = e => {
+    if (typeof window === "undefined" || !window.gtag) return
+    const data = {}
+    const formData = new FormData(document.querySelector("form"))
+    for (var pair of formData.entries()) {
+      data[pair[0]] = pair[1]
+    }
+    window.gtag("event", "conversion", { send_to: "AW-453996846", data })
+  }
+
   return (
     <div>
       <SectionHeader top={top} bottom={bottom} />
@@ -81,7 +91,7 @@ const Contact = () => {
           placeholder={message}
           id="message"
         />
-        <button className="contact-button" type="submit">
+        <button className="contact-button" type="button" onClick={onClick}>
           {send}
         </button>
       </form>
