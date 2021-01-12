@@ -91,7 +91,7 @@ const Contact = () => {
           placeholder={message}
           id="message"
         />
-        <button className="contact-button" type="button" onClick={onClick}>
+        <button className="contact-button" type="submit" onClick={onClick}>
           {send}
         </button>
       </form>
