@@ -72,6 +72,7 @@ const Contact = () => {
           name="email"
           placeholder="E-Mail"
           id="email"
+          required
         />
         <label htmlFor="subject">Subject</label>
         <input
@@ -81,6 +82,7 @@ const Contact = () => {
           name="subject"
           placeholder="Subject"
           id="subject"
+          required
         />
         <label htmlFor="message">Message</label>
         <textarea
@@ -90,6 +92,7 @@ const Contact = () => {
           name="message"
           placeholder={message}
           id="message"
+          required
         />
         <button className="contact-button" type="submit" onClick={onClick}>
           {send}
